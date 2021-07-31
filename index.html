@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="well well-large">
+		<br> 
+    <h1 >{% block title %} Welcome to Topic Modeling Express {% endblock %}</h1>
+	<h2>Your One Click Shop for Topic Modeling </h2>
+	<p><br> <br>  </p>
+	</div>
+	<div class="well well-large">
+	<p>
+		
+		
+	<p>
+		<div class="alert alert-primary">
+			<h3>1. Choose a text file (one text review in each line) </h3>
+			<h3>2. Click "Display Topics" </h3>
+			<h4>TADA: 5 Topics with 15 terms and their weithgs will be displayed </h4>
+			<h4>Looking for Sample files? Click in the "Sample Files" tab </h4>
+			<p> <br> </p><p> </p><p> </p>
+	<form action = "uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input class="btn btn-large btn-primary" type="submit" value="Display Topics">  
+      </form>
+  </div>  
+	 </p>
+ </div>  
+{% endblock %}
