@@ -1,0 +1,34 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to Topic Modeling Express {% endblock %}</h1>
+	<h2>Your One Click Shop for Topic Modeling </h2>
+	<h4>To come back to main page click "Home" </h4>
+	{% for topic in topics %}
+	<p>	
+     <table class="table table-bordered"  > 
+     <thead class="thead-light">
+        <tr>
+          <th colspan="2" class="bg-info"><span class="text-white">TOPIC	 - {%print(loop.index)%}</span></th>
+        </tr> 
+       <tr>
+         <th >Word</th>
+         <th >Weight</th>
+       </tr>
+     </thead>	 
+	 	{% for topicDict in topic %}
+			{% for topName in topicDict.keys() %}
+		<tr>
+			<td>{% print(topName) %}</td>
+			<td>{% print(topicDict[topName]) %}</td>
+			
+		</tr>
+			{% endfor %}
+		{% endfor %}
+	 
+ 	</table>
+	</p>
+
+	{% endfor %}  
+{% endblock %}
